@@ -1,0 +1,217 @@
+:root {
+  --plum: #68416f;
+  --deep-plum: #4c2d55;
+  --mauve: #a77ca7;
+  --lilac: #f3eaf4;
+  --ink: #332b35;
+  --muted: #8e8490;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--ink);
+  background: #f8f4f8;
+}
+
+.page-background {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(203, 170, 207, .25), transparent 28%),
+    radial-gradient(circle at 90% 85%, rgba(166, 122, 169, .16), transparent 25%),
+    #f8f4f8;
+}
+
+.login-card {
+  width: min(100%, 1000px);
+  min-height: 620px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 24px 75px rgba(69, 42, 73, .13);
+}
+
+.beauty-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 620px;
+  padding: 42px 45px 32px;
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(69, 39, 76, .88), rgba(115, 76, 119, .78)),
+    url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=85") center 35% / cover;
+}
+
+.beauty-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(44, 23, 49, .12), rgba(44, 23, 49, .35));
+}
+
+.brand-logo, .mobile-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: inherit;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -.6px;
+}
+
+.logo-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,.75);
+  border-radius: 50%;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.brand-accent { color: #d9b6dc; }
+
+.beauty-message {
+  position: relative;
+  z-index: 1;
+  max-width: 390px;
+  margin: 75px 0 60px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+}
+
+.beauty-message .eyebrow { color: #e8cfe9; }
+
+.beauty-message h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 4.4vw, 53px);
+  line-height: 1.13;
+  letter-spacing: -1.2px;
+}
+
+.beauty-message h2 em {
+  color: #e8cce9;
+  font-weight: 500;
+}
+
+.panel-description {
+  max-width: 320px;
+  margin-top: 20px;
+  color: rgba(255,255,255,.83);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.beauty-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 20px;
+  padding: 11px 15px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  color: #fff;
+  background: rgba(255,255,255,.1);
+  font-size: 10px;
+  backdrop-filter: blur(8px);
+}
+
+.beauty-pill span { font-size: 16px; }
+.panel-caption { color: rgba(255,255,255,.65); font-size: 9px; letter-spacing: 1.7px; }
+
+.decorative-circle {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 50%;
+}
+.circle-one { width: 300px; height: 300px; right: -170px; top: 90px; }
+.circle-two { width: 210px; height: 210px; right: -110px; top: 135px; }
+
+.form-panel { padding: 60px clamp(35px, 6vw, 76px); }
+.form-content { max-width: 360px; margin: auto; }
+.form-eyebrow { color: var(--mauve); }
+.form-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -.8px;
+}
+.form-subtitle { margin-top: 9px; color: var(--muted); font-size: 12px; }
+
+.form-label { margin-bottom: 8px; color: #4c424e; font-size: 11px; font-weight: 700; }
+.custom-input {
+  min-height: 48px;
+  border: 1px solid #e9e0ea;
+  border-radius: 8px !important;
+  color: var(--ink);
+  background: #fdfbfe;
+  font-size: 12px;
+  box-shadow: none !important;
+}
+.custom-input:focus { border-color: #a77ca7; background: #fff; }
+.custom-input::placeholder { color: #b4aab6; }
+.password-input { border-radius: 8px 0 0 8px !important; }
+.password-toggle {
+  border: 1px solid #e9e0ea;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  color: var(--plum);
+  background: #fdfbfe;
+  font-size: 10px;
+}
+.password-toggle:hover { color: var(--deep-plum); background: var(--lilac); }
+.small-link, .signup-text a { color: var(--plum); font-size: 10px; font-weight: 700; text-decoration: none; }
+.small-link:hover, .signup-text a:hover { color: var(--deep-plum); text-decoration: underline; }
+
+.custom-check { border-color: #cbbdce; }
+.custom-check:checked { border-color: var(--plum); background-color: var(--plum); }
+.remember-label { color: #817684; font-size: 10px; }
+
+.sign-in-button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(100deg, #805d84, #5b3a63);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: transform .2s, box-shadow .2s;
+}
+.sign-in-button span { margin-left: 9px; font-size: 17px; vertical-align: -1px; }
+.sign-in-button:hover, .sign-in-button:focus {
+  color: #fff;
+  background: linear-gradient(100deg, #704a76, #4c2d55);
+  box-shadow: 0 8px 18px rgba(76,45,85,.2);
+  transform: translateY(-1px);
+}
+.form-message { min-height: 16px; color: #648d70; font-size: 10px; }
+.signup-text { color: #8e8490; font-size: 10px; }
+.copyright { color: #b0a7b2; font-size: 9px; }
+
+.mobile-brand { display: none; color: var(--deep-plum); }
+.mobile-brand .logo-icon { border-color: var(--plum); }
+
+@media (max-width: 991.98px) {
+  .login-card { max-width: 520px; }
+  .beauty-panel { display: none !important; }
+  .form-panel { padding: 45px 42px; }
+  .mobile-brand { display: inline-flex; }
+}
+
+@media (max-width: 575.98px) {
+  .page-background { padding: 18px 12px !important; }
+  .login-card { border-radius: 16px; }
+  .form-panel { padding: 34px 25px; }
+  .form-title { font-size: 34px; }
+}
